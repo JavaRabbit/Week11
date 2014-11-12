@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="test.css" />
+	<title>Color Changing!</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+</head>
+
+<body>
+
+<div id= "intro">
+	Add stuff to your to do list:
+</div>
+
+<div id = "theForm">
+	This is for the form:
+	<form action=""  onsubmit="return (validateForm())" name="myForm">
+		Task: <input type="text" name="task"><br>
+		Who: <input type="text" name="who"><br>
+		<input type="submit" name="submit" value="push to Submit">
+	</form>
+</div>
+
+
+<div id="theOutput">
+
+	
+</div>
+
+<script>
+function validateForm(){
+	if(document.myForm.task.value ==""){
+		alert("Please enter your task.");
+		return false;
+	}
+	if(document.myForm.who.value ==""){
+		alert("Please enter your name.");
+		return false;
+	}
+
+	return(true);
+}
+</script>
+
+
+</body>
+</html>

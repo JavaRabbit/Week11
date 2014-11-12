@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Changing!</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+
+<body>
+
+<div id= "change">
+some stuff
+
+</div>
+<div id = "change2">
+ this is div 2
+<div>
+
+<style>
+.change{
+	height:300px;
+    width:300px;
+
+}
+
+</style>
+
+
+<button type="button" onclick="colorChanger()">Click here to see some colors</button>
+
+<script>
+
+window.onload = init;
+function init(){
+	$("#change").click(clickHandler);
+}
+
+function clickHandler(){
+	this.setAtttribute("class", "blue");
+	$("#change").addClass("blue");
+}
+
+
+// create an array of colors
+var bcolors = ["purple", "pink", "red", "blue"];
+
+/* set an initial value for the position
+	that is outside of the colorChanger function
+*/
+var position = 0;
+
+function colorChanger() {
+
+	//check if 'position' == 0, if so, that means that the button has never been clicked
+	if(position == 0){
+		position += 1;
+	}
+	
+    document.body.style.backgroundColor = bcolors[position -1];
+    position += 1;
+    if(position == bcolors.length + 1){
+    	position =1;
+    }
+
+    $("#change").css("background-color", "gray");
+}
+</script>
+
+</body>
+
+</html>

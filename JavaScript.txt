@@ -1,0 +1,56 @@
+JavaScript
+Head First. Javascript definitive guide.
+Worked at Disney then Oreily
+
+What is JavaScript?
+Core language, and Host Objects(extra things that allow javascript to interact
+with the environment)
+
+Chrome - javascript console
+var name = "bonnie"
+alert("hello" + name);
+
+clear console with the circle slash symbol
+
+Javascript - dynamic typing. a variable can be assigned another type, eg
+switch from int to string
+
+var age = 29
+typeof age
+
+console.log (will output to the console)
+
+var dog;
+if (dog == undefined) console.log("dog is not defined")
+
+Value Types -
+number
+string
+boolean
+
+
+// this is a comment
+/* this is a comment too */
+
+you can put your script into the head or the body, it makes a difference on how the
+page is loaded.
+
+Making a random number
+var randomLoc = Math.random() *5
+randomLoc = Math.floor(randomLoc)
+
+Function:
+function bark(name, weight){
+
+}
+
+Arrays in JavaScript
+
+var temps = [56,58, 59, 61];
+temps.push(33);
+temps.length;
+
+for loop
+
+
+Strings:
