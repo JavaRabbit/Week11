@@ -1,0 +1,68 @@
+Accessibility
+
+What is accessibility?
+Can people find it? use it? understand it?
+
+Types of disabilities:
+vision - blind, color blind, tunnel vision, hearing,
+fine motor and muscle control, learning and cognitive disorders,
+seizure and vestibular disorders
+
+12-20% have some disability
+
+AT (assistive technology), use of screen readers, refreshible braille,
+magnification, keyboard only input,
+
+Principles:
+W3C has principles for making web accessible, standards for HTML, CSS,
+Javascript, designed for web devs and designers
+
+WCAG principles, Can i find content, can i use interactive controls,
+Can i grasp content, Can I do all this with the platform I want
+
+
+Level A vs AA. (AA takes into account stuff is happening on the page).
+AAA is very strict (nothing moving on the page)
+
+Writing accessible HTML:
+Write good valid code, Create content with logical organization,
+Add more information to screen readerss
+
+Use paragraphs, headers, use lang="en" since google will know how
+to use google translate.
+
+Images = use alt "A cute black and white photo of a kitten."
+or use alt "".<figcaption>
+
+Youtube captions.
+
+Tables - use table captions (heading), always use headings,
+
+Form fields - always have form fields
+
+CSS examples:
+color contrast, Lea Veron's color contrast tools (gray #999)
+(visibility none, hiding)
+clip:rect (0 0 0)  (eg.hiding it behind something, or making it so tiny
+that you can't see it on the page)
+style = display:none
+
+colorrrs
+
+Test with validation test, w3c, verify color contrast,
+HTML_codesniffer
+wave evaluation tool (chrome add on, gives side bar that gives you
+all the errors)
+
+Keyboard accessibility testing
+Tab and Sthift tab to move between elements,
+Return and enter to fire links
+up and down arrows to select radio buttons
+spacebar to check a checkbox, fire a button
+
+Screen reader accessibility testing -
+Voice over keystrokes
+Voice over utility
+
+WebAIM,
+#a11y hashtag on twitter

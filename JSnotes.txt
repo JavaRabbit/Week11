@@ -1,0 +1,10 @@
+Javascript Notes:
+
+// Run this in the javascript console in Chrome to see if local
+// storage is supported
+
+if (localStorage) {
+  alert("LocalStorage is supported!");
+} else {
+  alert(" No support. Use a fallback such as browser cookies or store on the server.");
+}

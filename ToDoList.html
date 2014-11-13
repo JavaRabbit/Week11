@@ -26,25 +26,102 @@
 
 
 <div id="theOutput">
-
-	
+	<script>
+		document.write("this should be seen on the screen");
+		//document.write(task[0]);
+		document.write("this should be seen on the screen again");
+	</script>
 </div>
 
 <script>
-function validateForm(){
-	if(document.myForm.task.value ==""){
-		alert("Please enter your task.");
-		return false;
-	}
-	if(document.myForm.who.value ==""){
-		alert("Please enter your name.");
-		return false;
-	}
 
-	return(true);
-}
+	var task = ["get coffee", "buy books"];
+
+	function validateForm(){
+		if(document.myForm.task.value ==""){
+			alert("Please enter your task.");
+			return false;
+		}
+		if(document.myForm.who.value ==""){
+			alert("Please enter your name.");
+			return false;
+		}
+
+		// var x = 11;
+		// function getshere(){
+		// 	alert(x);
+		// }
+		//
+		// getshere();
+
+
+		// create a JavaScript array
+		/*
+		I gave up on storing the task and user as an array
+		task.push(document.myForm.task.value);
+		alert(task.length);
+		*/
+
+		// store task and arrays as local storage instead
+		localStorage.setItem(document.myForm.task.value, document.myForm.who.value);
+		alert("you entered " + localStorage[document.myForm.task.value]);
+
+
+		return(true);
+	}
 </script>
 
+<form id="contactForm" action="" method="POST">
+  <div class="field">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+  </div>
+  <div class="field">
+    <label for="email">Email goes here!</label>
+    <input type="email" name="email" id="email">
+  </div>
+  <div class="field">
+    <label for="message">Message</label>
+    <textarea name="message" id="message"></textarea>
+  </div>
+  <div class="field">
+    <input type="submit" value="send">
+  </div>
+</form>
+
+
+<script>
+window.onload = function() {
+
+  // Check for LocalStorage support.
+  if (localStorage) {
+
+    // Add an event listener for form submissions
+    document.getElementById('contactForm').addEventListener('submit', function() {
+      // Get the value of the name field.
+      var name = document.getElementById('name').value;
+
+      // Save the name in localStorage.
+      localStorage.setItem('name', name);
+    });
+
+  }
+
+	 // Retrieve the users name.
+  var name = localStorage.getItem('name');
+	alert("Hello " + name);
+  // if (name != "undefined" || name != "null") {
+  //   document.getElementById('welcomeMessage').innerHTML = "Hello " + name + "!";
+  // } else
+  //   document.getElementById('welcomeMessage').innerHTML = "Hello!";
+  // }
+
+
+}
+
+
+
+</script>
 
 </body>
 </html>
